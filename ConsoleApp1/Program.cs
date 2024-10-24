@@ -2,24 +2,45 @@
 {
     private static void Main(string[] args)
     {
-        int enter = Convert.ToInt32(Console.ReadLine());
+        string menu = Console.ReadLine();
 
-        if (enter % 2 == 0) {
-            Console.WriteLine("Parzysta " + enter);
-        }
-
-        else
+        switch (menu)
         {
-            Console.WriteLine("Nie Parzysta " + enter);
+
+            case "1":
+
+                int enter = Convert.ToInt32(Console.ReadLine());
+
+                if (enter % 2 == 0)
+                {
+                    Console.WriteLine("Parzysta " + enter);
+                }
+                break;
+
+            case "2":
+
+                int enter1 = Convert.ToInt32(Console.ReadLine());
+                for (int i = 2; i <= enter1; i++)
+                {
+                    if (i % 2 == 0)
+                    {
+                        Console.WriteLine(i);
+                    }
+                    string exit = Console.ReadLine();
+                    if (exit == "exit")
+                    {
+                        i = enter1;
+                    }
+
+                };
+                break;
+
+
+
+
+
         };
 
-          for(int i  = 0; i <= enter; i++)
-        {
-            if(i % 2 == 0)
-            {
-                Console.WriteLine(i);
-            }
-                                                                                                                
 
 
 
@@ -29,6 +50,8 @@
 
 
 
-        }
+        
+
+    } 
+
     }
-}
